@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  app:  ## service name
+    container_name: haha
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - TZ=Asia/Seoul
+    ports:
+      - "9999:8080"
+
+## services의 내용을 cmd에 작성하면 아래와 같은 코드      
+## service.app.container_name=haha
+## service.app.build.context=.
